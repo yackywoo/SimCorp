@@ -1,0 +1,21 @@
+Idea
+
+Create a simulated hybrid corporate environment
+
+-------------------------
+Requirements 
+-------------------------
+	1. On-site users = physical machines (PCs, printers, etc.) that will also need to be accessed via Azure
+	2. Off-site users = virtual machines will be provided via Azure, create and destroyed by Ansible
+	3. Active Directory and EntraID 
+
+-------------------------
+IPs, VLANs & Departments
+-------------------------
+	VLAN 5  = Servers, shared servers for the org (file server, printers, DHCP, DNS) -> eventually move DHCP/DNS into Azure 
+				    @ 172.20.5.0/24
+	VLAN 10 = HR                @ 172.20.10.0/24
+	VLAN 20 = Accounting        @ 172.20.20.0/24
+	VLAN 30 = Sales             @ 172.20.30.0/24
+	VLAN 99 = IT Management     @ 172.20.99.0/24
+
